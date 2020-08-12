@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////
 // Now let's accomplish the same thing using a class
 //////////////////////////////////////////////////////////
-class Alpha {
+class MyString {
 
   myVar = '';
 
@@ -11,6 +11,10 @@ class Alpha {
   }
 
   render() {
+
+    // this is the function on line 29 which is not part of the class
+    addSuffix();
+
     // once inside the class, we use 'this' to refer to the class instance    
     this.addSuffix();
     console.log(this.myVar);
@@ -21,12 +25,12 @@ class Alpha {
   }
 }
 
-// this 'addSuffix' is different from the one in class Alpha
+// this 'addSuffix' is different from the one in class MyString
 function addSuffix() {
-  console.log('you invoked the wrong function');
+  console.log('you invoked addSuffix() in the global scope');
 }
 
-const array1 = [new Alpha('value one'), new Alpha('value two')];
+const array1 = [new MyString('value one'), new MyString('value two')];
 for (const iterator of array1) {
   // there's no need to 'bind' here because we're invoking render() with a class instance
   // 'this' === 'iterator'

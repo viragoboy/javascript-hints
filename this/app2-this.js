@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////
-// Now let's try using 'this'
+// Now let's try using 'this' by binding it to a string
 //////////////////////////////////////////////////////////
 
 function render() {
@@ -15,6 +15,7 @@ function addSuffix(v) {
 const array1 = ['value one', 'value two'];
 for (const iterator of array1) {
   // bind 'iterator' to the value of 'this' inside of render()
+  // 'this' === 'iterator'
   const f = render.bind(iterator);
   f();
 }

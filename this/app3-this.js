@@ -1,9 +1,9 @@
 //////////////////////////////////////////////////////////
-// Now let's try using 'this'
+// Now let's try using 'this' without binding
 //////////////////////////////////////////////////////////
 
 function render() {
-  // 'this' refers to 'obj' because 'render' is a property of 'obj' (see line 19)
+  // 'this' refers to 'obj' because 'render' is a property of 'obj' (see line 22)
   const newV = addSuffix(this.iterator);
   console.log(newV);
 }
@@ -15,7 +15,9 @@ function addSuffix(v) {
 
 const array1 = ['value one', 'value two'];
 for (const iterator of array1) {
-  // this is the same as   const obj = { iterator: iterator, render: render }
+  // This is the same as   const obj = { iterator: iterator, render: render }
   const obj = { iterator, render }
+
+  // 'this' === 'obj'
   obj.render();
 }
