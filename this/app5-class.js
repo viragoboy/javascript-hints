@@ -11,10 +11,6 @@ class MyString {
   }
 
   render() {
-
-    // this is the function on line 29 which is not part of the class
-    addSuffix();
-
     // once inside the class, we use 'this' to refer to the class instance    
     this.addSuffix();
     console.log(this.myVar);
@@ -23,11 +19,6 @@ class MyString {
   addSuffix() {
     this.myVar = this.myVar + ' hello';
   }
-}
-
-// this 'addSuffix' is different from the one in class MyString
-function addSuffix() {
-  console.log('you invoked addSuffix() in the global scope');
 }
 
 const array1 = [new MyString('value one'), new MyString('value two')];
