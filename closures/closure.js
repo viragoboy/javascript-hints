@@ -19,12 +19,12 @@ function taxCalculator(state){
     return {displayName, calculateTax};
 }
 
-georgiaTax = taxCalculator('GA');
+const georgiaTax = taxCalculator('GA');
 georgiaTax.displayName('Susan');
-
-texasTax = taxCalculator('TX');
-texasTax.displayName('Mike');
-
-texasTax.calculateTax();
 georgiaTax.calculateTax();
+
+const texasTax = taxCalculator('TX');
+texasTax.displayName('Mike');
+texasTax.calculateTax();
+
 
