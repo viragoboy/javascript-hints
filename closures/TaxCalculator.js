@@ -18,11 +18,10 @@ class TaxCalculator {
 
 }
 
-georgiaTax = new TaxCalculator('GA');
+const georgiaTax = new TaxCalculator('GA');
 georgiaTax.displayName('Susan');
-
-texasTax = new TaxCalculator('TX');
-texasTax.displayName('Mike');
-
-texasTax.calculateTax();
 georgiaTax.calculateTax();
+
+const texasTax = new TaxCalculator('TX');
+texasTax.displayName('Mike');
+texasTax.calculateTax();
