@@ -1,3 +1,4 @@
+// A key element of a closure is a function which contains other functions
 function taxCalculator(state){
     function displayName(personName){
         console.log('Calculating taxes for ' + personName + ' living in ' + state);
@@ -12,6 +13,9 @@ function taxCalculator(state){
 
     }
 
+    // The return value of a closure are the functions contained within it.
+    // One can say that functions 'displayName' and 'calculateTax' are enclosed in a scope 
+    // containing a given value for variable 'state'.
     return {displayName, calculateTax};
 }
 
